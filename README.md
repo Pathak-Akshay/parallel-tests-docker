@@ -1,6 +1,6 @@
 # Parallel Test Execution with Docker Compose and TestNG
 
-This project demonstrates how to execute TestNG tests in parallel using Docker Compose, significantly reducing test execution time. This approach is perfect for showcasing distributed testing skills in SDET interviews.
+This project demonstrates how to execute TestNG tests in parallel using Docker Compose, significantly reducing test execution time.
 
 ## Project Overview
 
