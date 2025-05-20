@@ -1,0 +1,33 @@
+services:
+  moduleA:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: parallel-tests-modulea
+    container_name: parallel-tests-modulea
+    environment:
+      - TESTNG_XML=src/test/resources/testng-xmls/moduleA.xml
+    volumes:
+      - ./target:/app/target:delegated
+
+  moduleB:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: parallel-tests-moduleb
+    container_name: parallel-tests-moduleb
+    environment:
+      - TESTNG_XML=src/test/resources/testng-xmls/moduleB.xml
+    volumes:
+      - ./target:/app/target:delegated
+
+  moduleC:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: parallel-tests-modulec
+    container_name: parallel-tests-modulec
+    environment:
+      - TESTNG_XML=src/test/resources/testng-xmls/moduleC.xml
+    volumes:
+      - ./target:/app/target:delegated
